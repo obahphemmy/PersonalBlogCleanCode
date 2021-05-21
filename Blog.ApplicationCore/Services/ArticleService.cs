@@ -81,8 +81,7 @@ namespace Blog.ApplicationCore.Services
 				Author = $"{article.Author.Firstname} {article.Author.Lastname}",
 				ArthorImageUrl = article.Author.ProfilePhotoUrl,
 				ArticleImageUrl = article.ArticleImageUrl,
-				ArticleDate = article.CreatedDate.ToString("dddd, dd MMMM, yyyy"),
-				AuthorId = article.AuthorId
+				ArticleDate = article.CreatedDate.ToString("dddd, dd MMMM, yyyy")
 			};
 		}
 	}
