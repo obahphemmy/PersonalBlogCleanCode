@@ -1,0 +1,12 @@
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.DAL\obj\Debug\netstandard2.1\Blog.DAL.AssemblyInfoInputs.cache
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.DAL\obj\Debug\netstandard2.1\Blog.DAL.AssemblyInfo.cs
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.DAL\obj\Debug\netstandard2.1\Blog.DAL.csproj.CoreCompileInputs.cache
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.DAL\obj\Debug\netstandard2.1\Blog.DAL.csprojAssemblyReference.cache
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.DAL\bin\Debug\netstandard2.1\Blog.DAL.deps.json
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.DAL\bin\Debug\netstandard2.1\Blog.DAL.dll
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.DAL\bin\Debug\netstandard2.1\Blog.DAL.pdb
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.DAL\bin\Debug\netstandard2.1\Blog.ApplicationCore.dll
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.DAL\bin\Debug\netstandard2.1\Blog.ApplicationCore.pdb
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.DAL\obj\Debug\netstandard2.1\Blog.DAL.csproj.CopyComplete
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.DAL\obj\Debug\netstandard2.1\Blog.DAL.dll
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.DAL\obj\Debug\netstandard2.1\Blog.DAL.pdb

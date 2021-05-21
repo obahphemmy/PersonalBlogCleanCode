@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\CodebitsAcademy\\Cohort003\\ClassSessions\\ASP.NET Core MVC\\CodebitsBlog\\Blog.ApplicationCore\\Blog.ApplicationCore.csproj": {}
+  },
+  "projects": {
+    "C:\\CodebitsAcademy\\Cohort003\\ClassSessions\\ASP.NET Core MVC\\CodebitsBlog\\Blog.ApplicationCore\\Blog.ApplicationCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\CodebitsAcademy\\Cohort003\\ClassSessions\\ASP.NET Core MVC\\CodebitsBlog\\Blog.ApplicationCore\\Blog.ApplicationCore.csproj",
+        "projectName": "Blog.ApplicationCore",
+        "projectPath": "C:\\CodebitsAcademy\\Cohort003\\ClassSessions\\ASP.NET Core MVC\\CodebitsBlog\\Blog.ApplicationCore\\Blog.ApplicationCore.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\CodebitsAcademy\\Cohort003\\ClassSessions\\ASP.NET Core MVC\\CodebitsBlog\\Blog.ApplicationCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

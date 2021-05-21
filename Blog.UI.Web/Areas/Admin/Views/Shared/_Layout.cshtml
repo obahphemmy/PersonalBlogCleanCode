@@ -1,0 +1,179 @@
+﻿<!doctype html>
+<html class="no-js" lang="">
+
+
+<!-- Mirrored from www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/index4.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Apr 2021 07:25:02 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sample Blog | @ViewData["title"]</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/admin/img/favicon.png">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="~/admin/css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="~/admin/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/admin/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="~/admin/css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="~/admin/fonts/flaticon.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="~/admin/css/animate.min.css">
+    <!-- Data Table CSS -->
+    <link rel="stylesheet" href="~/admin/css/jquery.dataTables.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/admin/style.css">
+    <!-- Select 2 CSS -->
+    <link rel="stylesheet" href="~/admin/css/select2.min.css">
+    <!-- Modernize js -->
+    <script src="~/admin/js/modernizr-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+    <div id="wrapper" class="wrapper bg-ash">
+        <!-- Header Menu Area Start Here -->
+        <div class="navbar navbar-expand-md header-menu-one bg-light">
+            <div class="nav-bar-header-one">
+                <div class="header-logo">
+                    <a href="index-2.html">
+                        <img src="~/admin/img/logo.png" alt="logo" width="180" class="img-fluid">
+                    </a>
+                </div>
+                <div class="toggle-button sidebar-toggle">
+                    <button type="button" class="item-link">
+                        <span class="btn-icon-wrap">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="d-md-none mobile-nav-bar">
+                <button class="navbar-toggler pulse-animation" type="button" data-toggle="collapse" data-target="#mobile-navbar" aria-expanded="false">
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <button type="button" class="navbar-toggler sidebar-toggle-mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="header-main-menu collapse navbar-collapse" id="mobile-navbar">
+                <ul class="navbar-nav">
+                    <li class="navbar-item header-search-bar">
+                        <div class="input-group stylish-input-group">
+                            <span class="input-group-addon">
+                                <button type="submit">
+                                    <span class="flaticon-search" aria-hidden="true"></span>
+                                </button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Find Something . . .">
+                        </div>
+                    </li>
+                </ul>
+                
+                <partial name="_LoggedInUserPartial.cshtml">
+
+            </div>
+        </div>
+        <!-- Header Menu Area End Here -->
+        <!-- Page Area Start Here -->
+        <div class="dashboard-page-one">
+            <!-- Sidebar Area Start Here -->
+            <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
+                <div class="mobile-sidebar-header d-md-none">
+                    <div class="header-logo">
+                        <a href="index-2.html"><img src="~/admin/img/logo1.png" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="sidebar-menu-content">
+                    <ul class="nav nav-sidebar-menu sidebar-toggle-view">
+                        <li class="nav-item">
+                            <a asp-area="admin" asp-controller="dashboard" asp-action="index" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
+                        </li>
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-menu-1"></i><span>Users</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a asp-area="admin" asp-controller="users" asp-action="index" class="nav-link"><i class="fas fa-angle-right"></i>All User</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="admin" asp-controller="users" asp-action="add" class="nav-link"><i class="fas fa-angle-right"></i>Add New User</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-menu-1"></i><span>Categories</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a asp-area="admin" asp-controller="categories" asp-action="index" class="nav-link"><i class="fas fa-angle-right"></i>All Categories</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="admin" asp-controller="categories" asp-action="add" class="nav-link"><i class="fas fa-angle-right"></i>Add New Category</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-menu-1"></i><span>Articles</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a asp-area="admin" asp-controller="articles" asp-action="index" class="nav-link"><i class="fas fa-angle-right"></i>All Articles</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="admin" asp-controller="articles" asp-action="add" class="nav-link"><i class="fas fa-angle-right"></i>Add New Article</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="flaticon-settings"></i><span>Account</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Sidebar Area End Here -->
+
+
+            @RenderBody()
+
+
+        </div>
+        <!-- Page Area End Here -->
+
+
+    </div>
+
+
+    <!-- jquery-->
+    <script src="~/admin/js/jquery-3.3.1.min.js"></script>
+    <!-- Plugins js -->
+    <script src="~/admin/js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="~/admin/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="~/admin/js/bootstrap.min.js"></script>
+    <!-- Counterup Js -->
+    <script src="~/admin/js/jquery.counterup.min.js"></script>
+    <!-- Waypoints Js -->
+    <script src="~/admin/js/jquery.waypoints.min.js"></script>
+    <!-- Scroll Up Js -->
+    <script src="~/admin/js/jquery.scrollUp.min.js"></script>
+    <!-- Select 2 Js -->
+    <script src="~/admin/js/select2.min.js"></script>
+    <!-- Data Table Js -->
+    <script src="~/admin/js/jquery.dataTables.min.js"></script>
+    <!-- Custom Js -->
+    <script src="~/admin/js/main.js"></script>
+
+</body>
+
+
+<!-- Mirrored from www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/index4.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Apr 2021 07:25:02 GMT -->
+</html>

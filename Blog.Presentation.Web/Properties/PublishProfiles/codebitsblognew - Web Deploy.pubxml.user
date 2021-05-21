@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA24klAaZzMkqm8et1/V/+IQAAAAACAAAAAAAQZgAAAAEAACAAAACT5ke/4yLgGGNLfuwacGNiPMe6u1JAnxQUoEmm7dW2fQAAAAAOgAAAAAIAACAAAAAl1TMrGpCmAewVBXe1y7++oGXtm3wgXFsxxZe/CIpoJYAAAAAxkdsqzcX2i2UwuLkhdNvaz9cg3NkU00/E0yerMPfu8nZxTMxUdpdYyKWj2KtsYmLaMDzF/XFIjTeaRpsf9LQjBLCKxdtQcKGYqRcaZrVsXHTeJiYeo9V0fJDA6EK4ZBw8Wu7qlAYcJc4WU0/efvo2qzDkGC1BlWHGBvPopJ9CWUAAAABe0uuaI/J5SbZsY12dS/oom2Rx7760+sXjNvzeoiXROVRU2Hf8Cuzf5p6k2wrvT9vCzGUUIe21YqRg19Ya+KzD</EncryptedPassword>
+    <History>True|2021-05-20T16:31:50.8923930Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="Blog.DAL.Context.BlogDbContext">
+      <Value>Data Source=tcp:codebitsblogdbserver.database.windows.net,1433%3bInitial Catalog=Blog0519%3bUser Id=obahphemmy%40codebitsblogdbserver%3bPassword=ArikeMi...1984%40</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

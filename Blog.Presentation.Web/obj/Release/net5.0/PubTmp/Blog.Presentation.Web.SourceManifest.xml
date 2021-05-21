@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.Presentation.Web\obj\Release\net5.0\PubTmp\Out\" />
+  <dbfullsql path="C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.Presentation.Web\obj\Release\net5.0\PubTmp\EFSQLScripts\Blog.DAL.Context.BlogDbContext.sql" />
+</sitemanifest>

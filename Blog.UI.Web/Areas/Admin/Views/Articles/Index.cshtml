@@ -1,0 +1,97 @@
+﻿@model ArticleIndexViewModel 
+@{
+    ViewData["Title"] = "Articles";
+}
+
+<div class="dashboard-content-one">
+    <!-- Breadcubs Area Start Here -->
+    <div class="breadcrumbs-area">
+        <h3>Articles</h3>
+        <ul>
+            <li>
+                <a href="/admin/dashboard">Dashboard</a>
+            </li>
+            <li>All Articles</li>
+        </ul>
+    </div>
+    <!-- Breadcubs Area End Here -->
+    <!-- Teacher Table Area Start Here -->
+    <div class="card height-auto">
+        <div class="card-body">
+            <div class="heading-layout1">
+                <div class="item-title">
+                    <h3>All Articles</h3>
+                </div>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                       aria-expanded="false">...</a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-times text-orange-red"></i>Close
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-cogs text-dark-pastel-green"></i>Edit
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-redo-alt text-orange-peel"></i>Refresh
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="table display data-table text-wrap" data-page-length='10'>
+                    <thead>
+                        <tr>
+                            <th>Photo</th>
+                            <th>Title</th>
+                            <th>Extract</th>
+                            <th>Category</th>
+                            <th>Author</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @if (Model.Articles != null)
+                        {
+                            @foreach (var article in Model.Articles)
+                            {
+
+                        <tr>
+                            <td class="text-center">
+                                <div style="width:65px; height:65px; background-image:url(@article.ArticleImageUrl); background-size:cover; border-radius:100px;"></div>
+                            </td>
+                            <td>@article.Title </td>
+                            <td>@article.Body.Substring(0, 100) ...</td>
+                            <td>@article.Category</td>
+                            <td>@article.Author</td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                       aria-expanded="false">
+                                        <span class="flaticon-more-button-of-three-dots"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-times text-orange-red"></i>Close
+                                        </a>
+                                        <a class="dropdown-item" href="/admin/articles/edit/@article.Id">
+                                            <i class="fas fa-cogs text-dark-pastel-green"></i>Edit
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-redo-alt text-orange-peel"></i>Refresh
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+

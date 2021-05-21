@@ -1,0 +1,102 @@
+﻿@model AddUserViewModel
+@{
+    ViewData["Title"] = "Add New User";
+}
+
+
+<div class="dashboard-content-one">
+    <!-- Breadcubs Area Start Here -->
+    <div class="breadcrumbs-area">
+        <h3>All Users</h3>
+        <ul>
+            <li>
+                <a href="/admin/dashboard/index">Dashboard</a>
+            </li>
+            <li>Users</li>
+        </ul>
+    </div>
+    <!-- Breadcubs Area End Here -->
+    <!-- All Subjects Area Start Here -->
+
+    <div class="row">
+        <div class="col-4-xxxl col-12">
+            <div class="card height-auto">
+                <div class="card-body">
+                    <div class="heading-layout1">
+                        <div class="item-title">
+                            <h3>Add New User</h3>
+                        </div>
+
+
+                        @if (TempData["StatusMessage"] != null)
+                        {
+                        <div class="alert alert-success">
+                            <p>@TempData["StatusMessage"]</p>
+                        </div>
+                        }
+
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                               aria-expanded="false">...</a>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-times text-orange-red"></i>Close
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs text-dark-pastel-green"></i>Edit
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-redo-alt text-orange-peel"></i>Refresh
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="new-added-form" asp-controller="users" asp-action="add" method="post">
+                        <div class="row">
+                            <div class="col-12-xxxl col-lg-6 col-12 form-group">
+                                <label asp-for="Firstname">Firstname *</label>
+                                <input class="form-control" asp-for="Firstname">
+                                <span asp-validation-for="Firstname"></span>
+                            </div>
+
+                            <div class="col-12-xxxl col-lg-6 col-12 form-group">
+                                <label asp-for="Lastname">Lastname *</label>
+                                <input class="form-control" asp-for="Lastname">
+                                <span asp-validation-for="Lastname"></span>
+                            </div>
+
+                            <div class="col-12-xxxl col-lg-6 col-12 form-group">
+                                <label asp-for="Email">Email Address *</label>
+                                <input class="form-control" asp-for="Email">
+                                <span asp-validation-for="Email"></span>
+                            </div>
+
+                            <div class="col-12-xxxl col-lg-6 col-12 form-group">
+                                <label asp-for="UserImageUrl">Profile Photo URL *</label>
+                                <input  class="form-control" asp-for="UserImageUrl">
+                                <span asp-validation-for="UserImageUrl"></span>
+                            </div>
+
+                            <div class="col-12-xxxl col-lg-6 col-12 form-group">
+                                <label asp-for="Password">Password *</label>
+                                <input class="form-control" asp-for="Password">
+                            </div>
+
+                            <div class="col-12-xxxl col-lg-6 col-12 form-group">
+                                <label asp-for="ConfirmPassword">Confirm Password *</label>
+                                <input class="form-control" asp-for="ConfirmPassword">
+                                <span asp-validation-for="ConfirmPassword"></span>
+                            </div>
+
+                            <div class="col-12 form-group mg-t-8">
+                                <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Save</button>
+                                <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>
+</div>

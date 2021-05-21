@@ -1,0 +1,8 @@
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.UI.Web\obj\Debug\net5.0\Blog.UI.Web.csprojAssemblyReference.cache
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.UI.Web\obj\Debug\net5.0\Blog.UI.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.UI.Web\obj\Debug\net5.0\Blog.UI.Web.AssemblyInfoInputs.cache
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.UI.Web\obj\Debug\net5.0\Blog.UI.Web.AssemblyInfo.cs
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.UI.Web\obj\Debug\net5.0\Blog.UI.Web.csproj.CoreCompileInputs.cache
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.UI.Web\obj\Debug\net5.0\Blog.UI.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.UI.Web\obj\Debug\net5.0\Blog.UI.Web.RazorAssemblyInfo.cache
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.UI.Web\obj\Debug\net5.0\Blog.UI.Web.RazorAssemblyInfo.cs

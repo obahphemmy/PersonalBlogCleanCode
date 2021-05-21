@@ -1,0 +1,100 @@
+﻿@model AddArticleViewModel
+@{
+    ViewData["Title"] = "Add New Article";
+}
+
+
+<div class="dashboard-content-one">
+    <!-- Breadcubs Area Start Here -->
+    <div class="breadcrumbs-area">
+        <h3>All Articles</h3>
+        <ul>
+            <li>
+                <a href="/admin/dashboard/index">Dashboard</a>
+            </li>
+            <li>Articles</li>
+        </ul>
+    </div>
+    <!-- Breadcubs Area End Here -->
+    <!-- All Subjects Area Start Here -->
+
+    <div class="row">
+        <div class="col-12-xxxl col-12">
+            <div class="card height-auto">
+                <div class="card-body">
+                    <div class="heading-layout1">
+                        <div class="item-title">
+                            <h3>Add New Article</h3>
+                        </div>
+
+                        @if (TempData["StatusMessage"] != null)
+                        {
+                            <div class="alert alert-success">
+                                <p>@TempData["StatusMessage"]</p>
+                            </div>
+                        }
+
+
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                               aria-expanded="false">...</a>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-times text-orange-red"></i>Close
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs text-dark-pastel-green"></i>Edit
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-redo-alt text-orange-peel"></i>Refresh
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="new-added-form" action="/admin/articles/add" method="post">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-12-xxxl col-md-12 col-12 form-group">
+                                        <label asp-for="Title">Title *</label>
+                                        <input asp-for="Title" class="form-control">
+                                        <span asp-validation-for="Title" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="col-12-xxxl col-md-12 col-12 form-group">
+                                        <label asp-for="Body">Body *</label>
+                                        <textarea asp-for="Body" class="form-control" style="height:200px; resize: none;"></textarea>
+                                        <span asp-validation-for="Body" class="text-danger"></span>
+                                    </div>
+
+
+                                    <div class="col-12-xxxl col-md-12 col-12 form-group">
+                                        <label>Category *</label>
+                                        <select class="form-control" asp-items="Model.Categories" asp-for="CategoryId">
+                                            <option value="">Select category</option>
+                                        </select>
+                                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="col-12-xxxl col-md-12 col-12 form-group">
+                                        <label asp-for="PostImageUrl">Post Image URL *</label>
+                                        <input asp-for="PostImageUrl" class="form-control">
+                                        <span asp-validation-for="PostImageUrl" class="text-danger"></span>
+                                    </div>
+
+                                    <input type="hidden" asp-for="AuthorId" />
+
+                                    <div class="col-12 form-group mg-t-8">
+                                        <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Save</button>
+                                        <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

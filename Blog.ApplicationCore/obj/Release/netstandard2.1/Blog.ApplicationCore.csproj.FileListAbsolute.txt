@@ -1,0 +1,9 @@
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.ApplicationCore\bin\Release\netstandard2.1\Blog.ApplicationCore.deps.json
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.ApplicationCore\bin\Release\netstandard2.1\Blog.ApplicationCore.dll
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.ApplicationCore\bin\Release\netstandard2.1\Blog.ApplicationCore.pdb
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.ApplicationCore\obj\Release\netstandard2.1\Blog.ApplicationCore.csprojAssemblyReference.cache
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.ApplicationCore\obj\Release\netstandard2.1\Blog.ApplicationCore.AssemblyInfoInputs.cache
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.ApplicationCore\obj\Release\netstandard2.1\Blog.ApplicationCore.AssemblyInfo.cs
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.ApplicationCore\obj\Release\netstandard2.1\Blog.ApplicationCore.csproj.CoreCompileInputs.cache
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.ApplicationCore\obj\Release\netstandard2.1\Blog.ApplicationCore.dll
+C:\CodebitsAcademy\Cohort003\ClassSessions\ASP.NET Core MVC\CodebitsBlog\Blog.ApplicationCore\obj\Release\netstandard2.1\Blog.ApplicationCore.pdb
