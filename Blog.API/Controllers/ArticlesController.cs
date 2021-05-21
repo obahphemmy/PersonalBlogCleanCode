@@ -68,8 +68,8 @@ namespace Blog.API.Controllers
 				Title = item.Title,
 				Body = item.Body,
 				ArticleImageUrl = item.PostImageUrl,
-				AuthorId = item.AuthorId,
-				CategoryId = item.CategoryId
+				AuthorId = "90f7b7f1-d4a9-4cfc-9561-1a57abcd9092", // Default user id (Awaiting identity server implementation)
+				CategoryId = 1 // Placeholder for uncategorized articles...
 			};
 
 			int articleId = await _articleService.Add(articleDto);
