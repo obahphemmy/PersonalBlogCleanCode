@@ -20,7 +20,7 @@ namespace Blog.API.DTOs
 		[DataType(DataType.Text, ErrorMessage = "Select a valid category")]
 		public int CategoryId { get; set; } = 1;
 
-		public string AuthorId { get; set; }
+		public string AuthorId { get; set; } = "90f7b7f1-d4a9-4cfc-9561-1a57abcd9092";
 
 		[Required(ErrorMessage ="Please enter a post image URL")]
 		[RegularExpression(@"https?.+", ErrorMessage ="Plese provide a valid image URL")]

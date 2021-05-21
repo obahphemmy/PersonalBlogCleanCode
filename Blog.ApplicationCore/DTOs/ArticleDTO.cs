@@ -10,6 +10,5 @@
 		public string ArthorImageUrl { get; set; }
 		public string ArticleImageUrl { get; set; }
 		public string ArticleDate { get; set; }
-		public string AuthorId { get; set; }
 	}
 }
