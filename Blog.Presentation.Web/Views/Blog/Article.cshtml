@@ -1,6 +1,9 @@
 ﻿@model ArticleViewModel
+@inject UserManager<ApplicationUser> userManager
+
 @{
     ViewData["Title"] = "Article";
+    var user = await userManager.GetUserAsync(User);
 }
 
 <!--====== Post Details Start ======-->
@@ -21,7 +24,7 @@
                 <img src="@Model.Article.ArticleImageUrl" alt="image" class="img-fluid">
             </div>
             <div class="entry-content" style="white-space: pre-line; font-size: 20px;">
-                
+
                 @Model.Article.Body
 
             </div>
@@ -60,7 +63,7 @@
                     </div>
 
                 }
-                </div>
+            </div>
 
 
             <div class="related-posts">
@@ -73,18 +76,18 @@
                         @foreach (var article in Model.RelatedArticles)
                         {
 
-                    <div class="col-lg-6 col-md-6 col-sm-10">
-                        <div class="related-post-box">
-                            <div class="thumb">
-                                <img src="@article.ArticleImageUrl" alt="image" class="img-fluid">
+                            <div class="col-lg-6 col-md-6 col-sm-10">
+                                <div class="related-post-box">
+                                    <div class="thumb">
+                                        <img src="@article.ArticleImageUrl" alt="image" class="img-fluid">
+                                    </div>
+                                    <h5 class="title">
+                                        <a href="/blog/article/@article.Id">
+                                            @article.Title
+                                        </a>
+                                    </h5>
+                                </div>
                             </div>
-                            <h5 class="title">
-                                <a href="/blog/article/@article.Id">
-                                    @article.Title
-                                </a>
-                            </h5>
-                        </div>
-                    </div>
 
                         }
                     }
@@ -110,7 +113,6 @@
                             </p>
                             <div class="comment-footer">
                                 <span class="date"> 10:35pm, 27 jan 2015.</span>
-                                <a href="#" class="reply-link">Reply</a>
                             </div>
                         </div>
                     </div>
@@ -129,33 +131,52 @@
                             </p>
                             <div class="comment-footer">
                                 <span class="date"> 10:35pm, 27 jan 2015.</span>
-                                <a href="#" class="reply-link">Reply</a>
                             </div>
                         </div>
                     </div>
                 </li>
             </ul>
 
-            <h4 class="template-title">Leave your comment</h4>
-            <div class="comment-form">
-                <form action="#">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <input type="text" placeholder="Enter your name">
+            @if (user != null)
+            {
+
+                <h4 class="template-title">Leave your comment</h4>
+                <div class="comment-form">
+                    <form asp-controller="blog" asp-action="addcomment" method="post">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="text" placeholder="Enter your name" asp-for="Comment.CommentAuthor" value="@user.Firstname @user.Lastname" readonly>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="email" placeholder="Your Email" asp-for="Comment.CommentAuthorEmail" value="@user.Email" readonly>
+                            </div>
+                            <div class="col-12">
+                                <textarea placeholder="Your message here" asp-for="Comment.Comment"></textarea>
+                            </div>
+
+                            <input type="hidden" asp-for="Comment.ArticleId" value="@Model.Article.Id"/>
+
+                            <input type="hidden" asp-for="Comment.CommentAuthorId" value="@user.Id"/>
+
+                            <div class="col-12">
+                                <button type="submit">Post <i class="far fa-arrow-right"></i></button>
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <input type="email" placeholder="Your Email">
-                        </div>
-                        <div class="col-12">
-                            <textarea placeholder="Your message here"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit">Post <i class="far fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
+
+            }
+            else
+            {
+
+                <h4 class="template-title"><a href="#">Login to add a comment</a></h4>
+                <div class="comment-form">
+                   
+                </div>
+
+            }
+
             </div>
-        </div>
     </div>
 </section>
 <!--====== Post Details End ======-->

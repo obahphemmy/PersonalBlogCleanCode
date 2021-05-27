@@ -9,5 +9,6 @@ namespace Blog.Presentation.Web.ViewModels
 		public int? Previous { get; set; }
 		public int? Next { get; set; }
 		public IEnumerable<ArticleDTO> RelatedArticles { get; set; } = new List<ArticleDTO>();
+		public CommentViewModel Comment { get; set; }
 	}
 }

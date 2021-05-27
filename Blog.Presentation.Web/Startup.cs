@@ -7,16 +7,12 @@ using Blog.DAL.Repositories;
 using Blog.DAL.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Blog.Presentation.Web
 {
@@ -35,11 +31,14 @@ namespace Blog.Presentation.Web
 			services.AddDbContext<BlogDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 			services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 			services.AddScoped<IArticleRepository, ArticleRepository>();
 			services.AddScoped<IArticleService, ArticleService>();
 			services.AddScoped<IUserService, UserService>();
 			services.AddScoped<ICategoryService, CategoryService>();
+			services.AddScoped<ICommentService, CommentService>();
 
 			services.AddIdentity<ApplicationUser, IdentityRole>()
 				.AddEntityFrameworkStores<BlogDbContext>()

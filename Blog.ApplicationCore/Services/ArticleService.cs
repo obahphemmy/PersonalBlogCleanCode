@@ -60,6 +60,12 @@ namespace Blog.ApplicationCore.Services
 			return articles.Select(a => new ArticleDTO { Id = a.Id, Title = a.Title, ArticleImageUrl = a.ArticleImageUrl }).Take(count).ToList();
 		}
 
+		public IEnumerable<ArticleDTO> GetArticlesByCategoryName(string cat, int count = 20)
+		{
+			var articles = _unitOfWork.Articles.GetArticlesByCategoryName(cat);
+			return articles.Select(a => Map(a)).Take(count).ToList();
+		}
+
 		public async Task Remove(int id)
 		{
 			await _unitOfWork.Articles.Remove(id);

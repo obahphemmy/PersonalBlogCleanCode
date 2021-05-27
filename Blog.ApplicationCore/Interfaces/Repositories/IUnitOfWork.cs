@@ -9,6 +9,7 @@ namespace Blog.ApplicationCore.Interfaces.Repositories
 		public IRepository<ApplicationUser> Users { get; }
 		public IArticleRepository Articles { get; }
 		public IRepository<Category> Categories { get; }
+		public IRepository<Comment> Comments { get; }
 		Task<int> Complete();
 	}
 }

@@ -12,6 +12,7 @@ namespace Blog.ApplicationCore.Interfaces.Services
 		Task<bool> Add(AddApplicationUserDTO vm);
 		Task<bool> Remove(string id);
 		Task<string> GetCurrentUserId(ClaimsPrincipal user);
+		Task<ApplicationUserDTO> GetCurrentUser(ClaimsPrincipal user);
 		Task<bool> Login(AddApplicationUserDTO vm);
 		Task Logout();
 	}

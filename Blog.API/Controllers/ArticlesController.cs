@@ -26,9 +26,9 @@ namespace Blog.API.Controllers
 
 		[HttpGet]
 		[Route("{id}")]
-		public async Task<IActionResult> GetById(int id)
+		public async Task<IActionResult> GetById(int? id)
 		{
-			if (id == 0)
+			if (id == null)
 				return NotFound("Invalid id parameter!");
 			
 			var article = await _articleService.GetArticleById(id);
@@ -39,20 +39,20 @@ namespace Blog.API.Controllers
 			return Ok(article);
 		}
 
-		[HttpGet]
-		[Route("{category}")]
-		public IActionResult GetByCategoryName(string category)
-		{
-			if (category == string.Empty)
-				return NotFound("Invalid parameter!");
+		//[HttpGet]
+		//[Route("/category/{category}")]
+		//public IActionResult GetByCategoryName(string category)
+		//{
+		//	if (category == string.Empty)
+		//		return NotFound("Invalid parameter!");
 
-			var articles = _articleService.GetRelatedArticles(category, 20);
+		//	var articles = _articleService.GetArticlesByCategoryName(category);
 
-			if (articles == null)
-				return NotFound("Article not found!");
+		//	if (articles == null)
+		//		return NotFound("Article not found!");
 
-			return Ok(articles);
-		}
+		//	return Ok(articles);
+		//}
 
 		[HttpPost]
 		[Route("/articles")]

@@ -76,6 +76,19 @@ namespace Blog.DAL.Services
 			return user.Id;
 		}
 
+		public async Task<ApplicationUserDTO> GetCurrentUser(ClaimsPrincipal principal)
+		{
+			var user = await _userManager.GetUserAsync(principal);
+			return new ApplicationUserDTO 
+			{
+				Firstname = user.Firstname,
+				Lastname = user.Lastname,
+				Email = user.Email,
+				ProfilePhotoUrl = user.ProfilePhotoUrl,
+				Id = user.Id
+			};
+		}
+
 		public async Task<bool> Login(AddApplicationUserDTO loginView)
 		{
 			var result = await _signInManager.PasswordSignInAsync(loginView.Email, loginView.Password, isPersistent: loginView.RememberMe, lockoutOnFailure: true);

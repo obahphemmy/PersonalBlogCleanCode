@@ -10,11 +10,13 @@ namespace Blog.Presentation.Web.Controllers
     {
 		protected readonly IArticleService _articleService;
 		private readonly ICategoryService _categoryService;
+		private readonly IUserService _userService;
 
-		public BlogController(IArticleService articleService, ICategoryService categoryService)
+		public BlogController(IArticleService articleService, ICategoryService categoryService, IUserService userService)
         {
 			_articleService = articleService;
 			_categoryService = categoryService;
+			_userService = userService;
 		}
 
         public async Task<IActionResult> IndexAsync()
@@ -38,13 +40,25 @@ namespace Blog.Presentation.Web.Controllers
             if (id == null)
                 return NotFound();
 
+            // var user = await _userService.GetCurrentUser(User);
+
+            //var comment = new CommentViewModel
+            //{
+            //    CommentAuthor = $"{user.Firstname} {user.Lastname}",
+            //    CommentAuthorEmail = user.Email,
+            //    CommentAuthorId = user.Id,
+            //    ArticleId = article.Id
+            //};
+
             var article = await _articleService.GetArticleById(id);
+
             var vm = new ArticleViewModel
             {
                 Article = article,
                 Previous = await _articleService.GetPreviousArticleId(article.Id),
                 Next = await _articleService.GetNextArticleId(article.Id),
-                RelatedArticles = _articleService.GetRelatedArticles(article.Category)
+                RelatedArticles = _articleService.GetRelatedArticles(article.Category),
+                Comment = new CommentViewModel()
             };
 
             return View(vm);

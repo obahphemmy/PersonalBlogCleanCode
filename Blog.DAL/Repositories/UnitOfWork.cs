@@ -11,13 +11,15 @@ namespace Blog.DAL.Repositories
 		public IArticleRepository Articles { get; private set;  }
 		public IRepository<Category> Categories { get; private set; }
 		public IRepository<ApplicationUser> Users { get; private set; }
+		public IRepository<Comment> Comments { get; private set; }
 
-		public UnitOfWork(BlogDbContext dbContext, IArticleRepository articleRepository, IRepository<Category> categoryRepository, IRepository<ApplicationUser> userRepository)
+		public UnitOfWork(BlogDbContext dbContext, IArticleRepository articleRepository, IRepository<Category> categoryRepository, IRepository<ApplicationUser> userRepository, IRepository<Comment> commentRepository)
 		{
 			_dbContext = dbContext;
 			Articles = articleRepository;
 			Categories = categoryRepository;
 			Users = userRepository;
+			Comments = commentRepository;
 		}
 
 		public async Task<int> Complete()
